@@ -36,7 +36,7 @@
         <div class="mx-auto flex items-center justify-around py-24">
             <div class="profile-intro">
                 <span class="inline-flex items-center gap-2 text-sm px-3 py-1 rounded-full bg-green-50 text-green-700 border border-green-200 dark:bg-green-900/20 dark:text-green-400 dark:border-green-800"><span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>Available for work</span>
-                <h1 class="font-heading font-semibold text-7xl my-4">Hi, I'm <span>Deon</span> &mdash;<br> Software Engineer</h1>
+                <h1 class="font-heading font-semibold text-7xl my-4">Hi, I'm <span class="">Deon</span> &mdash;<br> Software Engineer</h1>
 
                 <!-- Typewriter -->
                 <p class="flex items-center mb-5 gap-0.5 min-h-8">
@@ -117,6 +117,251 @@
         </div>
     </section>
 
+    <!-- ── ABOUT ──────────────────────────────────────── -->
+    <section id="about" class="scroll-mt-nav" ">
+        <div class="max-w-6xl mx-auto px-4 md:px-8 py-20">
+            <!-- ── Section header ─────────────────────────── -->
+            <div data-reveal>
+                <p class="section-label">Get to know me</p>                <!-- → change label if you want -->
+                <h2 class="section-heading">About Me</h2>
+                <div class="accent-bar"></div>
+            </div>
+
+            <!-- 
+                MAIN GRID
+                Mobile:  1 column (stacked)
+                md+:     2 columns (bio left, stats right)
+            -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 mb-12">
+            <!-- ── LEFT COL: photo + bio ─────────────────── -->
+                <div data-reveal style="animation-delay: 0.1s;">
+
+                    <!-- Photo + name badge -->
+                    <div class="flex items-start gap-4 mb-6">
+                        <div class="about-avatar"><img src="./assets/profile.jpeg" alt=""></div>            <!-- → replace YK with your initials -->
+
+                        <div class="pt-1">
+                            <p style="font-size: 18px; font-weight: 700; color: var(--text-primary); margin: 0 0 6px;">Gideon C. Agu</p>                              <!-- → your name -->
+
+                            <!-- Location badge -->
+                            <span
+                            style="
+                                display: inline-flex;
+                                align-items: center;
+                                gap: 5px;
+                                padding: 4px 10px;
+                                border-radius: 99px;
+                                font-size: 11px;
+                                font-family: 'JetBrains Mono', monospace;
+                                border: 1px solid var(--color-accent);
+                                color: var(--color-accent);
+                            "
+                            >
+                            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Accra, Ghana                              <!-- → your location -->
+                            </span>
+                        </div>
+                    </div>
+
+
+                    <!-- Bio paragraphs
+                        Formula:
+                        ¶1 — What you do + why you do it
+                        ¶2 — How you approach your work
+                        ¶3 — Who you are outside code (personality)
+                        Keep total under 100 words.               -->
+                    <div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px;">
+
+                        <p style="font-size: 16px; color: var(--color-text-3); line-height: 1.5; margin: 0;">
+                            <!-- → rewrite this in your own voice -->
+                            I'm a full-stack developer who loves turning complex problems into
+                            clean, working software. I got into coding to build tools I actually
+                            wanted to exist — and I've been hooked ever since.
+                        </p>
+
+                        <p style="font-size: 16px; color: var(--color-text-3); line-height: 1.5; margin: 0;">
+                            <!-- → rewrite this in your own voice -->
+                            I care about the full picture — from a pixel-perfect UI to a
+                            well-structured database. For me, good code isn't just code that
+                            works; it's code the next developer can understand and build on.
+                        </p>
+
+                        <p style="font-size: 16px; color: var(--color-text-3); line-height: 1.5; margin: 0;">
+                            <!-- → rewrite this in your own voice -->
+                            Outside of coding, you'll find me mentoring junior devs,
+                            exploring Accra's food scene, or deep in a rabbit hole about
+                            system design at 2am.
+                        </p>
+                    </div>
+
+
+                </div>
+
+
+                <!-- ── RIGHT COL: stats + skills ──────────────── -->
+                <div data-reveal style="animation-delay: 0.2s;">
+
+                    <!-- Stat cards grid
+                        Mobile:  3 cols (they're short, this works)
+                        Numbers: keep them real — small honest numbers
+                                beat large invented ones.             -->
+                    <div class="grid grid-cols-3 gap-3 mb-8">
+
+                        <div class="stat-card">
+                            <div class="stat-num">12+</div>             <!-- → your real number -->
+                            <div class="stat-lbl">Projects<br>shipped</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-num">3+</div>              <!-- → your real number -->
+                            <div class="stat-lbl">Years<br>building</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-num" style="font-size: 15px; padding-top: 4px;">Open<br>source</div>
+                            <div class="stat-lbl">contributor</div>
+                        </div>
+                    </div>
+
+                    <!-- "What I value" chips
+                        Update labels + icons to match your real values.
+                        Icon reference: https://tabler.io/icons        -->
+                    <div>
+                        <p style="font-size: 12px; font-weight: 700; color: var(--text-primary); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 10px;">What I value</p>
+
+                        <div class="flex flex-wrap gap-2">
+                            <!-- → update these chips to match your values -->
+                            <span class="value-chip">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                                Clean code
+                            </span>
+                            <span class="value-chip">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                Collaboration
+                            </span>
+                            <span class="value-chip">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                                Ship fast
+                            </span>
+                            <span class="value-chip">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                                Always learning
+                            </span>
+                            <span class="value-chip">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                                Open source
+                            </span>
+                        </div>
+                    </div>
+            </div>
+
+
+            <!-- ══════════════════════════════════════════════
+                MINI TIMELINE
+                3 milestones — shows growth without needing
+                a full Experience section.
+                Mobile + desktop: single column, full width.
+            ══════════════════════════════════════════════ -->
+            <div data-reveal style="animation-delay: 0.25s; margin-bottom: 48px;">
+                <p style="font-size: 12px;font-weight: 700;color: var(--text-primary);text-transform: uppercase;letter-spacing: 0.07em;margin-bottom: 20px;">My journey</p>
+
+                <!-- Timeline entries — update content, keep structure -->
+
+                <!-- Entry 1 -->
+                <div class="flex gap-4">
+                    <div class="flex flex-col items-center">
+                        <div class="tl-dot"></div>
+                        <div class="tl-line"></div>
+                    </div>
+                    <div style="padding-bottom: 24px; flex: 1;">
+                        <p class="tl-year">2022</p>                  <!-- → your real year -->
+                        <p class="tl-title">Started freelancing</p>  <!-- → your milestone title -->
+                        <!-- → rewrite in your own words -->
+                        <p class="tl-desc">
+                            Built my first 5 client sites using HTML, CSS and vanilla JS.
+                            Learned about scope creep, deadlines, and how to price my work.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Entry 2 -->
+                <div class="flex gap-4">
+                    <div class="flex flex-col items-center">
+                        <div class="tl-dot"></div>
+                        <div class="tl-line"></div>
+                    </div>
+                    <div style="padding-bottom: 24px; flex: 1;">
+                        <p class="tl-year">2023</p>                  <!-- → your real year -->
+                        <p class="tl-title">Went full-stack</p>      <!-- → your milestone title -->
+                        <!-- → rewrite in your own words -->
+                        <p class="tl-desc">
+                            Added Node.js, PostgreSQL and React to my stack.
+                            Shipped my first SaaS product with real paying users.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Entry 3 — always keep this as "now" -->
+                <div class="flex gap-4">
+                    <div class="flex flex-col items-center">
+                        <div class="tl-dot"></div>
+                        <div class="tl-line"></div>
+                        <!-- No tl-line after the last entry -->
+                    </div>
+                    <div style="flex: 1;">
+                        <p class="tl-year">Now</p>
+                        <p class="tl-title">Open to opportunities</p>
+                        <!-- → rewrite in your own words -->
+                        <p class="tl-desc">
+                            Actively building and looking for full-stack roles or freelance
+                            projects. Based in Accra, open to remote work globally.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ══════════════════════════════════════════════
+                CLOSING CTA STRIP
+                Never leave the reader hanging at the bottom
+                of About — bridge them to Contact.
+            ══════════════════════════════════════════════ -->
+            <div class="about-cta-strip" data-reveal style="animation-delay: 0.3s;">
+
+                <div>
+                    <p
+                    style="
+                        font-family: var(--font-heading);
+                        font-size: 20px;
+                        font-weight: 700;
+                        color: var(--text-primary);
+                        margin: 0 0 4px;
+                    "
+                    >
+                    Let's build something together
+                    </p>
+                    <p style="font-size: 14px; color: var(--color-text-3); margin: 0;">
+                    <!-- → update to reflect your current availability -->
+                    Based in Accra &mdash; open to remote roles and freelance projects.
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap gap-3">
+                    <a href="#contact" class="btn-primary">Get in touch</a>
+                    <a
+                    href="assets/resume.pdf"
+                    download
+                    class="btn-outline"
+                    aria-label="Download resume PDF"
+                    >
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download CV
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <script src="./js/main.js"></script>
 </body>
