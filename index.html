@@ -24,7 +24,7 @@
                 <a href="#about">About</a>
                 <a href="#projects">Project</a>
                 <a href="#tools">Tools</a>
-                <a href="contact">Contact</a>
+                <a href="#contact">Contact</a>
             </nav>
             <button id="theme-toggle" aria-label="Toggle theme" class="border rounded-md p-1 flex items-center">
                 <span class="material-symbols-outlined">light_mode</span>
@@ -363,10 +363,375 @@
         </div>
     </section>
 
+
+
+    <!-- SKILLS SECTION — Tag pill variant -->
+    <section id="skills" class="scroll-mt-nav" style="background: var(--bg-color);">
+        <div class="max-w-6xl mx-auto px-4 md:px-8 py-20">
+
+            <!-- Section header -->
+            <div data-reveal>
+                <p class="section-label">What I work with</p>
+                <h2 class="section-heading">Skills &amp; Stack</h2>
+                <div class="accent-bar"></div>
+            </div>
+
+            <!-- ── Pill groups ──────────────────────────────── -->
+            <div data-reveal style="animation-delay: 0.1s;">
+
+                <!-- FRONTEND -->
+                <div class="pill-group">
+                    <p class="pill-group-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                        Frontend
+                    </p>
+                    <div class="pill-wrap">
+                        <!-- dot class: adv = advanced, int = intermediate, lrn = learning -->
+                        <!-- → update these pills to match your actual frontend skills -->
+                        <span class="pill"><span class="pill-dot adv"></span>HTML</span>
+                        <span class="pill"><span class="pill-dot adv"></span>CSS</span>
+                        <span class="pill"><span class="pill-dot adv"></span>Tailwind CSS</span>
+                        <span class="pill"><span class="pill-dot adv"></span>JavaScript</span>
+                        <span class="pill"><span class="pill-dot int"></span>React</span>
+                        <span class="pill"><span class="pill-dot int"></span>TypeScript</span>
+                    </div>
+                </div>
+
+                <!-- BACKEND -->
+                <div class="pill-group">
+                    <p class="pill-group-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                        Backend
+                    </p>
+                    <div class="pill-wrap">
+                        <!-- → update these pills to match your actual backend skills -->
+                        <span class="pill"><span class="pill-dot adv"></span>Node.js</span>
+                        <span class="pill"><span class="pill-dot adv"></span>REST APIs</span>
+                        <span class="pill"><span class="pill-dot int"></span>Express.js</span>
+                        <span class="pill"><span class="pill-dot int"></span>JWT Auth</span>
+                        <span class="pill"><span class="pill-dot lrn"></span>GraphQL</span>
+                    </div>
+                </div>
+
+                <!-- DATABASE -->
+                <div class="pill-group">
+                    <p class="pill-group-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
+                        Database
+                    </p>
+                    <div class="pill-wrap">
+                        <!-- → update these pills to match your actual database skills -->
+                        <span class="pill"><span class="pill-dot adv"></span>PostgreSQL</span>
+                        <span class="pill"><span class="pill-dot int"></span>MongoDB</span>
+                        <span class="pill"><span class="pill-dot int"></span>MySQL</span>
+                        <span class="pill"><span class="pill-dot lrn"></span>Redis</span>
+                    </div>
+                </div>
+
+                <!-- TOOLS & DEVOPS -->
+                <div class="pill-group">
+                    <p class="pill-group-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        Tools &amp; DevOps
+                    </p>
+                    <div class="pill-wrap">
+                        <!-- → update these pills to match your actual tools -->
+                        <span class="pill"><span class="pill-dot adv"></span>Git &amp; GitHub</span>
+                        <span class="pill"><span class="pill-dot int"></span>Docker</span>
+                        <span class="pill"><span class="pill-dot int"></span>Linux</span>
+                        <span class="pill"><span class="pill-dot int"></span>Vercel</span>
+                        <span class="pill"><span class="pill-dot int"></span>Render</span>
+                        <span class="pill"><span class="pill-dot int"></span>Figma</span>
+                        <span class="pill"><span class="pill-dot lrn"></span>CI/CD</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- ── Currently learning strip ────────────────── -->
+
+            <div class="learning-strip" data-reveal style="animation-delay: 0.2s;">
+                <span class="learning-label">Currently exploring</span>
+
+                <!-- → replace these with what you're genuinely learning now -->
+                <span class="pill" style="border-style: dashed;">
+                    <span class="pill-dot lrn"></span>TypeScript
+                </span>
+                <span class="pill" style="border-style: dashed;">
+                    <span class="pill-dot lrn"></span>AWS
+                </span>
+                <span class="pill" style="border-style: dashed;">
+                    <span class="pill-dot lrn"></span>Next.js
+                </span>
+            </div>
+
+
+            <!-- ── Legend ───────────────────────────────────── -->
+            <div class="pill-legend" data-reveal style="animation-delay: 0.25s;">
+                <span class="legend-item">
+                    <span class="legend-dot" style="background: var(--color-accent);"></span>
+                    Advanced — use it daily, comfortable in interviews
+                </span>
+                <span class="legend-item">
+                    <span class="legend-dot" style="background: #7f77dd;"></span>
+                    Intermediate — shipped real projects with it
+                </span>
+                <span class="legend-item">
+                    <span class="legend-dot" style="background: var(--color-text-3);"></span>
+                    Learning — actively studying right now
+                </span>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- PROJECTS SECTION — Featured card + 3-column card grid -->
+
+    <section id="work" class="scroll-mt-nav" style="background: var(--bg-color);">
+        <div class="max-w-6xl mx-auto px-4 md:px-8 py-20">
+
+            <!-- Section header -->
+            <div data-reveal>
+                <p class="section-label">What I've built</p>
+                <h2 class="section-heading">Projects</h2>
+                <div class="accent-bar"></div>
+            </div>
+
+
+            <!-- FEATURED PROJECT -->
+            <div class="project-featured" data-reveal style="animation-delay: 0.1s;">
+
+                <!-- Thumbnail — left on desktop, top on mobile -->
+                <div class="feat-thumb">            
+                    <!-- → replace this placeholder once you have a screenshot -->
+                    <div class="feat-thumb-placeholder">
+                        Add your screenshot here<br/>
+                        <span style="font-size: 11px; opacity: 0.6;">assets/images/project-one.png</span>
+                    </div>
+                </div>
+
+                <!-- Body — right on desktop, bottom on mobile -->
+                <div class="feat-body">
+                    <span class="feat-badge">
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        Featured project                          <!-- → change label if you want -->
+                    </span>
+
+                    <!-- → your project name -->
+                    <h3 class="feat-title">SaaS Analytics Dashboard</h3>
+
+                    <!-- → one-paragraph case study: problem → approach → result -->
+                    <p class="feat-desc">
+                    Small businesses were tracking revenue in spreadsheets with no
+                    real-time data and no team access. I built a full-stack dashboard
+                    with a Node.js API, PostgreSQL for time-series data, and a React
+                    frontend — deployed on Render with Docker.
+                    </p>
+
+                    <!-- → real numbers if you have them; remove this block if not -->
+                    <div class="metrics-row">
+                        <div class="metric-item">
+                            <div class="metric-num">500+</div>         <!-- → your real metric -->
+                            <div class="metric-lbl">active users</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-num">40%</div>          <!-- → your real metric -->
+                            <div class="metric-lbl">faster reporting</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-num">99.9%</div>        <!-- → your real metric -->
+                            <div class="metric-lbl">uptime</div>
+                        </div>
+                    </div>
+
+                    <!-- → your actual tech stack -->
+                    <div class="project-tags" style="margin-bottom: 18px;">
+                        <span class="project-tag">React</span>
+                        <span class="project-tag">Node.js</span>
+                        <span class="project-tag">PostgreSQL</span>
+                        <span class="project-tag">Docker</span>
+                        <span class="project-tag">Chart.js</span>
+                        <span class="project-tag">Render</span>
+                    </div>
+
+                    <div class="project-links">
+                        <!-- → your real live URL -->
+                        <a
+                            href="https://your-project.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link live"
+                        >
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            Live demo
+                        </a>
+                        <!-- → your real GitHub URL -->
+                        <a
+                            href="https://github.com/yourusername/project-repo"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link"
+                        >
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                            Source code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ════════════════════════════════════════════
+                PROJECT CARD GRID
+                Mobile:  1 column
+                sm:      2 columns
+                lg:      3 columns
+
+                Add or remove .project-card blocks as needed.
+                Aim for 2–4 cards here (plus the featured = 3–5 total)
+            ════════════════════════════════════════════ -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" data-reveal style="animation-delay: 0.2s;">
+
+                <!-- ── CARD 1 ─ -->
+                <div class="project-card">
+                    <div class="project-thumb">
+                        <!--
+                            → replace with real screenshot:
+                            <img src="assets/images/project-two.png" alt="Job Board API" loading="lazy" />
+                        -->
+                        <div class="thumb-placeholder">
+                            screenshot<br/>coming soon
+                        </div>
+                    </div>
+
+                    <div class="project-body">
+                        <div class="project-top">
+                            <h3 class="project-title">Job Board API</h3>   <!-- → project name -->
+                            <span class="project-type backend">Backend</span> <!-- → type: fullstack / backend / frontend -->
+                        </div>
+
+                        <!-- → outcome-focused description (what problem + what result) -->
+                        <p class="project-desc">
+                            REST API with JWT authentication, role-based access control, and
+                            full-text job search — built to handle high-read, low-write traffic patterns.
+                        </p>
+
+                        <!-- → your real tech stack, keep to 4–5 tags -->
+                        <div class="project-tags">
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">Express</span>
+                            <span class="project-tag">PostgreSQL</span>
+                            <span class="project-tag">JWT</span>
+                        </div>
+
+                        <div class="project-links">
+                            <!-- Remove the "live" link if there's no deployed demo -->
+                            <a href="https://github.com/yourusername/job-board-api" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                                GitHub
+                            </a>
+                            <a href="#" class="project-link">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                                API Docs
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- ── CARD 2 ──────────────────────────────── -->
+                <div class="project-card">
+                    <div class="project-thumb">
+                        <!--
+                            → replace with real screenshot:
+                            <img src="assets/images/project-three.png" alt="E-commerce Store" loading="lazy" />
+                        -->
+                        <div class="thumb-placeholder">
+                            screenshot<br/>coming soon
+                        </div>
+                    </div>
+
+                    <div class="project-body">
+                        <div class="project-top">
+                            <h3 class="project-title">E-commerce Store</h3>  <!-- → project name -->
+                            <span class="project-type fullstack">Full-stack</span>
+                        </div>
+
+                        <!-- → outcome-focused description -->
+                        <p class="project-desc">
+                            Online store with product listings, a shopping cart, Stripe payments,
+                            and an admin dashboard for inventory management.
+                        </p>
+
+                        <!-- → your real tech stack -->
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">Stripe</span>
+                            <span class="project-tag">MongoDB</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://your-store-demo.com" target="_blank" rel="noopener noreferrer" class="project-link live">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                Live
+                            </a>
+                            <a href="https://github.com/yourusername/ecommerce" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- ── CARD 3 ──────────────────────────────── -->
+                <div class="project-card">
+                    <div class="project-thumb">
+                        <div class="thumb-placeholder">
+                            screenshot<br/>coming soon
+                        </div>
+                    </div>
+
+                    <div class="project-body">
+                        <div class="project-top">
+                            <h3 class="project-title">Your Third Project</h3>  <!-- → project name -->
+                            <span class="project-type fullstack">Full-stack</span>
+                        </div>
+
+                        <p class="project-desc">
+                            <!-- → describe the problem your project solved and the outcome -->
+                            Describe what this project does and why you built it.
+                            Focus on the outcome, not just the features.
+                        </p>
+
+                        <div class="project-tags">
+                            <!-- → your real tech stack -->
+                            <span class="project-tag">Tech 1</span>
+                            <span class="project-tag">Tech 2</span>
+                            <span class="project-tag">Tech 3</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="#" class="project-link live">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                Live
+                            </a>
+                            <a href="#" class="project-link">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end card grid -->
+        </div>
+    </section>
+
+
     
-
-
-
 
 
     <script src="./js/main.js"></script>
