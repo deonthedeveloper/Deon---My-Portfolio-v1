@@ -1,5 +1,18 @@
 {
-    "cSpell.words": [
-        "adipisicing"
-    ]
+  "cSpell.words": [
+    "adipisicing",
+    "nowrap",
+    "opensource",
+    "rgba"
+  ],
+  "tailwindCSS.experimental.configFile": "css/input.css",
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "javascript": "javascript"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "tailwindCSS.validate": true,
+  "css.validate": false
 }

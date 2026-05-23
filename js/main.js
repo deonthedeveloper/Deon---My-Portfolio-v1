@@ -1,4 +1,4 @@
-// ── 4. Typewriter effect ────────────────────── 
+// ── 4. Typewriter effect 
 const phrases = [
     'I build full-stack web apps.',
     'I turn ideas into products.',
@@ -61,4 +61,131 @@ typeLoop();
 
   skillObserver.observe(skillSection);
 
+})();
+
+
+(function () {
+ 
+  const form       = document.getElementById('contact-form');
+  const successBox = document.getElementById('form-success');
+  const submitBtn  = document.getElementById('form-submit-btn');
+  const btnText    = document.getElementById('btn-text');
+  const btnLoading = document.getElementById('btn-loading');
+ 
+  if (!form) return;
+ 
+  /* ── Validation helpers ── */
+  function showError(id, inputId) {
+    document.getElementById(id).classList.add('show');
+    document.getElementById(inputId).classList.add('error');
+  }
+  function clearError(id, inputId) {
+    document.getElementById(id).classList.remove('show');
+    document.getElementById(inputId).classList.remove('error');
+  }
+ 
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+ 
+  function validateForm() {
+    let valid = true;
+ 
+    const name    = document.getElementById('contact-name').value.trim();
+    const email   = document.getElementById('contact-email').value.trim();
+    const message = document.getElementById('contact-message').value.trim();
+ 
+    if (!name) {
+      showError('err-name', 'contact-name');
+      valid = false;
+    } else {
+      clearError('err-name', 'contact-name');
+    }
+ 
+    if (!email || !isValidEmail(email)) {
+      showError('err-email', 'contact-email');
+      valid = false;
+    } else {
+      clearError('err-email', 'contact-email');
+    }
+ 
+    if (!message) {
+      showError('err-message', 'contact-message');
+      valid = false;
+    } else {
+      clearError('err-message', 'contact-message');
+    }
+ 
+    return valid;
+  }
+ 
+  /* ── Clear error on input ── */
+  ['contact-name', 'contact-email', 'contact-message'].forEach(id => {
+    document.getElementById(id)?.addEventListener('input', () => {
+      const errId = id.replace('contact-', 'err-');
+      clearError(errId, id);
+    });
+  });
+ 
+  /* ── Form submit handler ── */
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+ 
+    if (!validateForm()) return;
+ 
+    /* Loading state */
+    submitBtn.disabled        = true;
+    btnText.style.display     = 'none';
+    btnLoading.style.display  = 'flex';
+ 
+    try {
+      const response = await fetch(form.action, {
+        method:  'POST',
+        body:    new FormData(form),
+        headers: { 'Accept': 'application/json' },
+      });
+ 
+      if (response.ok) {
+        /* Success — hide form, show confirmation */
+        form.style.display      = 'none';
+        successBox.classList.add('show');
+      } else {
+        /* Formspree returned an error */
+        const data = await response.json();
+        const msg  = data?.errors?.map(e => e.message).join(', ')
+                     || 'Something went wrong. Please email me directly.';
+        alert(msg);
+        resetButtonState();
+      }
+    } catch {
+      /* Network error */
+      alert('Could not send your message. Please email me directly at deonthedeveloper@gmail.com');
+      resetButtonState();
+    }
+  });
+ 
+  function resetButtonState() {
+    submitBtn.disabled       = false;
+    btnText.style.display    = 'flex';
+    btnLoading.style.display = 'none';
+  }
+ 
+  /* ── Reset — lets user send another message ─── */
+  window.resetContactForm = function () {
+    form.reset();
+    form.style.display = '';
+    successBox.classList.remove('show');
+    resetButtonState();
+  };
+ 
+  /* ── CSS for spinner animation ──────────────── */
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+  `;
+  document.head.appendChild(style);
+ 
 })();
