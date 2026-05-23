@@ -338,8 +338,8 @@
   .border-green-200 {
     border-color: var(--color-green-200);
   }
-  .border-b-gray-500 {
-    border-bottom-color: var(--color-gray-500);
+  .border-b-text-2 {
+    border-bottom-color: var(--color-text-2);
   }
   .bg-\(--bg-color\) {
     background-color: var(--bg-color);
@@ -415,6 +415,9 @@
   }
   .text-slate-100 {
     color: var(--color-slate-100);
+  }
+  .text-text-3 {
+    color: var(--color-text-3);
   }
   .antialiased {
     -webkit-font-smoothing: antialiased;
@@ -1050,7 +1053,7 @@ h1, h2, h3, h4, h5, h6 {
     white-space: nowrap;
   }
   .project-card {
-    background: var(--text-secondary);
+    background: #262626;
     border: 1px solid var(--color-text-2);
     border-radius: 16px;
     overflow: hidden;
@@ -1504,15 +1507,15 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
   }
   .form-success-title {
-    font-family: 'Syne', sans-serif;
+    font-family: var(--font-mono);
     font-size: 20px;
     font-weight: 700;
-    color: var(--color-text);
+    color: var(--text-primary);
     margin: 0 0 6px;
   }
   .form-success-msg {
     font-size: 14px;
-    color: var(--color-text-2);
+    color: var(--color-text-3);
     margin: 0 0 20px;
   }
   .site-footer {

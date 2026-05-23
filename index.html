@@ -17,13 +17,14 @@
     <title>Deon — Full-Stack Developer</title>
 </head>
 <body class="bg-(--bg-color) text-slate-100 min-h-screen antialiased text-base">
-    <header class="sticky top-0 z-50 backdrop-blur-sm flex border-b border-b-gray-500 items-center justify-between px-8 py-4">
+    <header class="sticky top-0 z-50 backdrop-blur-sm flex border-b border-b-text-2 items-center justify-between px-8 py-4">
         <span class="font-semibold tracking-tight">Deon</span>
         <div class="flex items-center gap-4">
-            <nav class="flex gap-6 text-sm text-gray-500">
+            <nav class="flex gap-6 text-sm text-text-3">
                 <a href="#about">About</a>
-                <a href="#projects">Project</a>
-                <a href="#tools">Tools</a>
+                <a href="#skills">Skills</a>
+                <a href="#work">Project</a>
+                <a href="#experience">Experience</a>
                 <a href="#contact">Contact</a>
             </nav>
             <button id="theme-toggle" aria-label="Toggle theme" class="border rounded-md p-1 flex items-center">
@@ -884,14 +885,7 @@
         </div>
     </section>
 
-    <!-- CONTACT SECTION — Form + info panel + footer
-    Replace the #contact placeholder in index.html with this.
-    
-    FORM BACKEND — Formspree (free, no server needed):
-    1. Go to https://formspree.io and sign up (free)
-    2. Create a new form — you get a unique endpoint URL
-    3. Replace YOUR_FORMSPREE_ID below with your form ID
-        e.g.  https://formspree.io/f/xbjnkpqr
+    <!-- CONTACT SECTION — 
     The JS handles submission, loading state + success state.
     -->
  
@@ -911,7 +905,7 @@
                 md+:     2 columns (form left, info right) -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16" data-reveal style="animation-delay: 0.1s;">
  
-                <!-- ── LEFT: Contact form ─────────────────── -->
+                <!-- ── LEFT: Contact form ─── -->
                 <div>
  
                     <!-- Availability badge -->
@@ -937,15 +931,12 @@
                             animation: pulseDot 2s ease-in-out infinite;
                             "
                         ></span>
-                        <!-- → update this to reflect your real availability -->
                         Available for work &mdash; replies within 24h
                     </div>
  
  
-                    <!-- THE FORM
-                        action → replace YOUR_FORMSPREE_ID with your real ID
-                        e.g.  action="https://formspree.io/f/xbjnkpqr"      -->
-                    <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" novalidate>
+                    <!-- THE FORM -->
+                    <form id="contact-form" action="https://formspree.io/f/xdajzrwj" method="POST" novalidate>
  
                         <!-- Name -->
                         <div class="form-field">
@@ -1133,7 +1124,7 @@
                         transition: border-color 0.2s;
                     "
                     onmouseover="this.style.borderColor='var(--color-accent)'"
-                    onmouseout="this.style.borderColor='var(--color-border)'"
+                    onmouseout="this.style.borderColor='var(--color-text-2)'"
                     >
                         <p style="font-size: 13px; color: var(--color-text-3); margin: 0 0 10px;">
                             Prefer a PDF? Download my CV and share it with your team.
