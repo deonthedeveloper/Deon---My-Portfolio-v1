@@ -20,18 +20,32 @@
     <header id="site-header" class="sticky top-0 z-50 backdrop-blur-sm flex border-b border-b-text-2 items-center justify-between px-8 py-4">
         <span class="font-semibold tracking-tight">Deon</span>
         <div class="flex items-center gap-4">
-            <nav class="flex gap-6 text-sm text-text-3">
+            <nav id="desktop-nav" class="hidden md:flex gap-6 text-sm text-text-3">
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#work">Project</a>
                 <a href="#experience">Experience</a>
                 <a href="#contact">Contact</a>
             </nav>
+            <button id="mobile-menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav" class="md:hidden border rounded-md p-2 flex items-center justify-center">
+                <span class="material-symbols-outlined">menu</span>
+                <span class="sr-only">Open navigation</span>
+            </button>
             <button id="theme-toggle" aria-label="Toggle theme" class="border rounded-md p-1 flex items-center">
                 <span class="material-symbols-outlined">light_mode</span>
             </button>
         </div>
     </header>
+
+    <div id="mobile-nav" class="md:hidden hidden border-t border-t-text-2 bg-[rgba(21,19,18,0.94)] backdrop-blur-sm">
+        <nav class="flex flex-col gap-2 px-4 py-3 text-sm text-text-3">
+            <a href="#about" class="block rounded-xl px-3 py-2 hover:bg-[rgba(20,184,166,0.12)] hover:text-accent">About</a>
+            <a href="#skills" class="block rounded-xl px-3 py-2 hover:bg-[rgba(20,184,166,0.12)] hover:text-accent">Skills</a>
+            <a href="#work" class="block rounded-xl px-3 py-2 hover:bg-[rgba(20,184,166,0.12)] hover:text-accent">Project</a>
+            <a href="#experience" class="block rounded-xl px-3 py-2 hover:bg-[rgba(20,184,166,0.12)] hover:text-accent">Experience</a>
+            <a href="#contact" class="block rounded-xl px-3 py-2 hover:bg-[rgba(20,184,166,0.12)] hover:text-accent">Contact</a>
+        </nav>
+    </div>
 
     <section class="Hero-section " id="hero">
         <div class="max-w-6xl mx-auto my-28 px-4 flex flex-col md:flex-row items-center justify-between md:px-8 ">

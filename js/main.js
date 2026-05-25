@@ -189,3 +189,27 @@ typeLoop();
   document.head.appendChild(style);
  
 })();
+
+(function () {
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileNav = document.getElementById('mobile-nav');
+
+  if (!mobileMenuButton || !mobileNav) return;
+
+  function closeMobileNav() {
+    mobileNav.classList.add('hidden');
+    mobileMenuButton.setAttribute('aria-expanded', 'false');
+    mobileMenuButton.querySelector('.material-symbols-outlined').textContent = 'menu';
+  }
+
+  mobileMenuButton.addEventListener('click', () => {
+    const isOpen = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+    mobileNav.classList.toggle('hidden');
+    mobileMenuButton.setAttribute('aria-expanded', String(!isOpen));
+    mobileMenuButton.querySelector('.material-symbols-outlined').textContent = isOpen ? 'menu' : 'close';
+  });
+
+  mobileNav.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', closeMobileNav);
+  });
+})();
