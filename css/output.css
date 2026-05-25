@@ -590,6 +590,10 @@ html {
   line-height: 1.5;
   font-size: 16px;
 }
+.min-h-screen {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
 body {
   background-color: var(--bg-color);
   color: var(--text-primary);
@@ -619,8 +623,10 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   transition: border-color 0.3s;
 }
-.avatar-ring:hover {
-  border-color: var(--color-accent);
+@media (hover: hover) and (pointer: fine) {
+  .avatar-ring:hover {
+    border-color: var(--color-accent);
+  }
 }
 .avatar-ring img {
   width: 100%;
@@ -641,9 +647,11 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
   transition: border-color 0.2s, transform 0.15s;
 }
-.stat-chip:hover {
-  border-color: var(--color-accent);
-  transform: translateY(-1px);
+@media (hover: hover) and (pointer: fine) {
+  .stat-chip:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-1px);
+  }
 }
 .btn-primary {
   display: inline-flex;
@@ -662,8 +670,10 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   transition: opacity 0.2s, transform 0.15s;
 }
-.btn-primary:hover {
-  opacity: 0.88;
+@media (hover: hover) and (pointer: fine) {
+  .btn-primary:hover {
+    opacity: 0.88;
+  }
 }
 .btn-primary:active {
   transform: scale(0.97);
@@ -684,9 +694,11 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   transition: border-color 0.2s, transform 0.15s;
 }
-.btn-outline:hover {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
+@media (hover: hover) and (pointer: fine) {
+  .btn-outline:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
 }
 .btn-outline:active {
   transform: scale(0.97);
@@ -722,10 +734,12 @@ h1, h2, h3, h4, h5, h6 {
   transition: border-color 0.2s, color 0.2s, transform 0.15s;
   font-size: 16px;
 }
-.social-link:hover {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
-  transform: translateY(-2px);
+@media (hover: hover) and (pointer: fine) {
+  .social-link:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    transform: translateY(-2px);
+  }
 }
 #theme-toggle {
   cursor: pointer;
@@ -741,9 +755,11 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text-2);
   transition: border-color 0.2s, color 0.2s;
 }
-#theme-toggle:hover {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
+@media (hover: hover) and (pointer: fine) {
+  #theme-toggle:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
 }
 #mobile-menu-button {
   cursor: pointer;
@@ -759,9 +775,11 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text-2);
   transition: border-color 0.2s, color 0.2s;
 }
-#mobile-menu-button:hover {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
+@media (hover: hover) and (pointer: fine) {
+  #mobile-menu-button:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
 }
 #mobile-nav {
   position: fixed;
@@ -776,11 +794,15 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   transition: opacity 0.28s ease, transform 0.28s ease, max-height 0.28s ease, visibility 0.28s ease;
   transform: translateY(-10px);
+  border-top: 1px solid var(--color-text-2);
+  backdrop-filter: blur(16px);
+  background: rgba(21, 19, 18, 0.94);
 }
 #mobile-nav.open {
   opacity: 1;
   visibility: visible;
   max-height: calc(100vh - 4rem);
+  max-height: calc(100dvh - 4rem);
   transform: translateY(0);
 }
 #mobile-nav.closing {
@@ -792,27 +814,46 @@ h1, h2, h3, h4, h5, h6 {
 #mobile-nav a {
   transition: background-color 0.2s, color 0.2s;
 }
-#mobile-nav a:hover {
-  background: rgba(20, 184, 166, 0.12);
-  color: var(--color-accent);
+@media (hover: hover) and (pointer: fine) {
+  #mobile-nav a:hover {
+    background: rgba(20, 184, 166, 0.12);
+    color: var(--color-accent);
+  }
 }
 #desktop-nav a {
   position: relative;
-  transition: color 0.2s;
+  transition: color 0.2s ease;
 }
-#desktop-nav a.active {
-  color: var(--color-accent);
-  font-weight: 600;
-}
-#desktop-nav a.active::after {
+#desktop-nav a::after {
   content: '';
   position: absolute;
   left: 0;
   bottom: -5px;
-  width: 100%;
+  width: 0;
   height: 2px;
   background: var(--color-accent);
   border-radius: 999px;
+  opacity: 0;
+  transition: width 0.25s ease, opacity 0.25s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  #desktop-nav a:hover, #desktop-nav a.active {
+    color: var(--color-accent);
+  }
+  #desktop-nav a:hover::after, #desktop-nav a.active::after {
+    width: 100%;
+    opacity: 1;
+  }
+}
+#desktop-nav a.active {
+  font-weight: 600;
+}
+#desktop-nav a:active, #desktop-nav a:focus-visible {
+  outline: none;
+}
+#desktop-nav a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
 }
 @media (min-width: 48rem) {
   #mobile-menu-button {
@@ -829,18 +870,6 @@ h1, h2, h3, h4, h5, h6 {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
-}
-#mobile-nav {
-  border-top: 1px solid var(--color-text-2);
-  backdrop-filter: blur(16px);
-  background: rgba(21, 19, 18, 0.94);
-}
-#mobile-nav a {
-  transition: background-color 0.2s, color 0.2s;
-}
-#mobile-nav a:hover {
-  background: rgba(20, 184, 166, 0.12);
-  color: var(--color-accent);
 }
 @layer components {
   .section-label {
@@ -883,8 +912,10 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     transition: border-color 0.3s, transform 0.3s;
   }
-  .about-avatar:hover {
-    transform: scale(1.03);
+  @media (hover: hover) and (pointer: fine) {
+    .about-avatar:hover {
+      transform: scale(1.03);
+    }
   }
   .about-avatar img {
     width: 100%;
@@ -898,9 +929,11 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     transition: border-color 0.2s, transform 0.2s;
   }
-  .stat-card:hover {
-    border-color: var(--color-accent);
-    transform: translateY(-2px);
+  @media (hover: hover) and (pointer: fine) {
+    .stat-card:hover {
+      border-color: var(--color-accent);
+      transform: translateY(-2px);
+    }
   }
   .stat-num {
     font-family: 'Syne', sans-serif;
@@ -926,9 +959,11 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-primary);
     transition: border-color 0.2s, color 0.2s;
   }
-  .value-chip:hover {
-    border-color: var(--color-accent);
-    color: var(--text-primary);
+  @media (hover: hover) and (pointer: fine) {
+    .value-chip:hover {
+      border-color: var(--color-accent);
+      color: var(--text-primary);
+    }
   }
   .value-chip svg {
     color: var(--color-accent);
@@ -1011,8 +1046,10 @@ h1, h2, h3, h4, h5, h6 {
     gap: 16px;
     transition: border-color 0.2s;
   }
-  .about-cta-strip:hover {
-    border-color: var(--color-accent);
+  @media (hover: hover) and (pointer: fine) {
+    .about-cta-strip:hover {
+      border-color: var(--color-accent);
+    }
   }
 }
 @layer components {
@@ -1054,10 +1091,12 @@ h1, h2, h3, h4, h5, h6 {
     transition: border-color 0.2s, color 0.2s, transform 0.15s;
     cursor: default;
   }
-  .pill:hover {
-    border-color: var(--color-accent);
-    color: var(--color-accent);
-    transform: translateY(-2px);
+  @media (hover: hover) and (pointer: fine) {
+    .pill:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+      transform: translateY(-2px);
+    }
   }
   .pill-dot {
     width: 7px;
@@ -1107,8 +1146,10 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 14px;
     transition: border-color 0.2s;
   }
-  .learning-strip:hover {
-    border-color: var(--color-accent);
+  @media (hover: hover) and (pointer: fine) {
+    .learning-strip:hover {
+      border-color: var(--color-accent);
+    }
   }
   .learning-label {
     font-size: 11px;
@@ -1135,8 +1176,10 @@ h1, h2, h3, h4, h5, h6 {
       grid-template-columns: 1fr 1fr;
     }
   }
-  .project-featured:hover {
-    border-color: var(--color-accent);
+  @media (hover: hover) and (pointer: fine) {
+    .project-featured:hover {
+      border-color: var(--color-accent);
+    }
   }
   .feat-thumb {
     background: var(--color-bg-3);
@@ -1153,8 +1196,10 @@ h1, h2, h3, h4, h5, h6 {
     object-fit: cover;
     transition: transform 0.4s ease;
   }
-  .project-featured:hover .feat-thumb img {
-    transform: scale(1.03);
+  @media (hover: hover) and (pointer: fine) {
+    .project-featured:hover .feat-thumb img {
+      transform: scale(1.03);
+    }
   }
   .feat-thumb-placeholder {
     font-size: 13px;
@@ -1232,9 +1277,11 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
   }
-  .project-card:hover {
-    border-color: var(--color-accent);
-    transform: translateY(-4px);
+  @media (hover: hover) and (pointer: fine) {
+    .project-card:hover {
+      border-color: var(--color-accent);
+      transform: translateY(-4px);
+    }
   }
   .project-thumb {
     width: 100%;
@@ -1253,8 +1300,10 @@ h1, h2, h3, h4, h5, h6 {
     object-fit: cover;
     transition: transform 0.4s ease;
   }
-  .project-card:hover .project-thumb img {
-    transform: scale(1.05);
+  @media (hover: hover) and (pointer: fine) {
+    .project-card:hover .project-thumb img {
+      transform: scale(1.05);
+    }
   }
   .thumb-placeholder {
     font-size: 12px;
@@ -1344,17 +1393,21 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     transition: border-color 0.15s, color 0.15s;
   }
-  .project-link:hover {
-    border-color: var(--color-accent);
-    color: var(--color-accent);
+  @media (hover: hover) and (pointer: fine) {
+    .project-link:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
   }
   .project-link.live {
     background: var(--color-accent);
     color: #fff;
     border-color: var(--color-accent);
   }
-  .project-link.live:hover {
-    opacity: 0.88;
+  @media (hover: hover) and (pointer: fine) {
+    .project-link.live:hover {
+      opacity: 0.88;
+    }
   }
 }
 @layer components {
@@ -1386,8 +1439,10 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--bg-color-1);
     border: 2px solid var(--color-text-2);
   }
-  .exp-entry:hover .exp-dot {
-    transform: scale(1.2);
+  @media (hover: hover) and (pointer: fine) {
+    .exp-entry:hover .exp-dot {
+      transform: scale(1.2);
+    }
   }
   .exp-line {
     width: 1.5px;
@@ -1579,8 +1634,10 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 18px;
     transition: opacity 0.2s, transform 0.15s;
   }
-  .form-submit:hover {
-    opacity: 0.88;
+  @media (hover: hover) and (pointer: fine) {
+    .form-submit:hover {
+      opacity: 0.88;
+    }
   }
   .form-submit:active {
     transform: scale(0.98);
@@ -1600,8 +1657,10 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 8px;
     transition: border-color 0.2s;
   }
-  .contact-info-card:hover {
-    border-color: var(--color-accent);
+  @media (hover: hover) and (pointer: fine) {
+    .contact-info-card:hover {
+      border-color: var(--color-accent);
+    }
   }
   .contact-info-icon {
     width: 36px;
@@ -1646,9 +1705,11 @@ h1, h2, h3, h4, h5, h6 {
     background: transparent;
     cursor: pointer;
   }
-  .social-btn:hover {
-    border-color: var(--color-accent);
-    color: var(--color-accent);
+  @media (hover: hover) and (pointer: fine) {
+    .social-btn:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
   }
   .form-success {
     display: none;
@@ -1705,8 +1766,14 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
     transition: color 0.15s;
   }
-  .back-to-top:hover {
-    color: var(--color-accent);
+  @media (hover: hover) and (pointer: fine) {
+    .back-to-top:hover {
+      color: var(--color-accent);
+    }
+  }
+  .focus-ring, button:focus-visible, [role="button"]:focus-visible, a:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
   }
 }
 @property --tw-rotate-x {
