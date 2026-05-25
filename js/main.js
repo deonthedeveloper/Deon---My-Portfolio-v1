@@ -197,19 +197,65 @@ typeLoop();
   if (!mobileMenuButton || !mobileNav) return;
 
   function closeMobileNav() {
-    mobileNav.classList.add('hidden');
+    mobileNav.classList.remove('open');
+    mobileNav.classList.add('closing');
     mobileMenuButton.setAttribute('aria-expanded', 'false');
     mobileMenuButton.querySelector('.material-symbols-outlined').textContent = 'menu';
+
+    window.setTimeout(() => {
+      if (!mobileNav.classList.contains('open')) {
+        mobileNav.classList.remove('closing');
+      }
+    }, 280);
+  }
+
+  function openMobileNav() {
+    mobileNav.classList.remove('closing');
+    mobileNav.classList.add('open');
+    mobileMenuButton.setAttribute('aria-expanded', 'true');
+    mobileMenuButton.querySelector('.material-symbols-outlined').textContent = 'close';
   }
 
   mobileMenuButton.addEventListener('click', () => {
     const isOpen = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-    mobileNav.classList.toggle('hidden');
-    mobileMenuButton.setAttribute('aria-expanded', String(!isOpen));
-    mobileMenuButton.querySelector('.material-symbols-outlined').textContent = isOpen ? 'menu' : 'close';
+    if (isOpen) {
+      closeMobileNav();
+    } else {
+      openMobileNav();
+    }
   });
 
   mobileNav.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', closeMobileNav);
   });
+
+  const desktopNavLinks = document.querySelectorAll('#desktop-nav a');
+  const sectionIds = ['about', 'skills', 'work', 'experience', 'contact'];
+  const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+  function setActiveNavLink(id) {
+    desktopNavLinks.forEach(link => {
+      const href = link.getAttribute('href')?.replace('#', '');
+      if (href === id) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  if (sections.length) {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActiveNavLink(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.45 }
+    );
+
+    sections.forEach(section => observer.observe(section));
+  }
 })();
