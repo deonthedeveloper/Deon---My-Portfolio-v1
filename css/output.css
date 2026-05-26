@@ -583,7 +583,7 @@
   animation-delay: 0.68s;
 }
 *, *::before, *::after {
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, -webkit-tap-highlight-color: transparent;
 }
 html {
   scroll-behavior: smooth;
@@ -612,11 +612,10 @@ h1, h2, h3, h4, h5, h6 {
   height: 250px;
   border-radius: 50%;
   border: 2px solid var(--color-accent);
-  background: var(--color-bg-2);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-heading);
   font-size: 36px;
   font-weight: 700;
   color: var(--color-text-2);
@@ -643,7 +642,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 99px;
   font-size: 14px;
   color: var(--color-text-3);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   white-space: nowrap;
   transition: border-color 0.2s, transform 0.15s;
 }
@@ -900,11 +899,10 @@ h1, h2, h3, h4, h5, h6 {
     height: 110px;
     border-radius: 50%;
     border: 2px solid var(--color-accent);
-    background: var(--color-bg-2);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Syne', sans-serif;
+    font-family: var(--font-heading);
     font-size: 32px;
     font-weight: 700;
     color: var(--color-accent);
@@ -985,12 +983,11 @@ h1, h2, h3, h4, h5, h6 {
   }
   .skill-pct {
     color: var(--color-accent);
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-mono);
     font-size: 12px;
   }
   .skill-track {
     height: 4px;
-    background: var(--color-bg-3);
     border-radius: 2px;
     overflow: hidden;
   }
@@ -1012,13 +1009,13 @@ h1, h2, h3, h4, h5, h6 {
   }
   .tl-line {
     width: 1px;
-    background: var(--color-border);
+    background: var(--color-text-2);
     flex: 1;
     min-height: 24px;
     margin: 3px 0 3px 4.5px;
   }
   .tl-year {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-mono);
     font-size: 11px;
     color: var(--color-accent);
     margin-bottom: 2px;
