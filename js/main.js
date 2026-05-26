@@ -259,3 +259,54 @@ typeLoop();
     sections.forEach(section => observer.observe(section));
   }
 })();
+
+(function () {
+  const themeToggle = document.getElementById('theme-toggle');
+  const rootElement = document.documentElement;
+  const storageKey = 'theme';
+
+  if (!themeToggle) return;
+
+  function getStoredTheme() {
+    return localStorage.getItem(storageKey);
+  }
+
+  function getPreferredTheme() {
+    if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+      return 'light';
+    }
+    return 'dark';
+  }
+
+  function updateToggleButton(theme) {
+    const icon = themeToggle.querySelector('.material-symbols-outlined');
+    if (icon) {
+      icon.textContent = theme === 'light' ? 'dark_mode' : 'light_mode';
+    }
+    themeToggle.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
+  }
+
+  function applyTheme(theme) {
+    if (theme === 'light') {
+      rootElement.classList.add('light');
+    } else {
+      rootElement.classList.remove('light');
+    }
+    updateToggleButton(theme);
+  }
+
+  function initTheme() {
+    const stored = getStoredTheme();
+    const theme = stored || getPreferredTheme();
+    applyTheme(theme);
+  }
+
+  themeToggle.addEventListener('click', () => {
+    const current = rootElement.classList.contains('light') ? 'light' : 'dark';
+    const nextTheme = current === 'light' ? 'dark' : 'light';
+    localStorage.setItem(storageKey, nextTheme);
+    applyTheme(nextTheme);
+  });
+
+  initTheme();
+})();
