@@ -38,10 +38,10 @@
     <meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)">
 
     <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -88,10 +88,11 @@
         </nav>
     </div>
 
+    <main>
     <section class="Hero-section " id="hero">
         <div class="max-w-6xl mx-auto my-28 px-4 flex flex-col md:flex-row items-center justify-between md:px-8 ">
             <div class="profile-intro">
-                <span class="inline-flex items-center gap-2 text-sm px-3 py-1 rounded-full text-green-700 border border-green-400 "><span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>Available for work</span>
+                <span class="inline-flex items-center gap-2 text-sm px-3 py-1 rounded-full text-green-700 border border-green-400 "><span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span><span class="status-bar-text">Available for work</span></span>
                 <h1 class="font-heading text-5xl sm:text-6xl md:text-7xl font-semibold md:font-bold leading-tight my-4">Hi, I'm <span class="">Deon</span> &mdash;<br> Full-Stack Developer</h1>
 
                 <!-- Typewriter -->
@@ -1142,7 +1143,6 @@
                             download
                             class="btn-outline"
                             style="font-size: 13px; width: 100%; justify-content: center;"
-                            aria-label="Download CV as PDF"
                         >
                             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                             Download CV / Resume
@@ -1167,8 +1167,55 @@
  
         </div>
     </section>
+    </main>
 
 
     <script src="./js/main.js"></script>
+
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gideon C. Agu",
+        "alternateName": "Deon",
+        "jobTitle": "Full-Stack Developer",
+        "description": "Full-stack developer based in Accra, Ghana. I build fast, scalable web apps using React, Node.js, and PostgreSQL.",
+        "url": "https://yourportfolio.com",
+        "image": "https://yourportfolio.com/assets/profile.jpeg",
+        "email": "deonthedeveloper@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Accra",
+            "addressRegion": "Greater Accra",
+            "addressCountry": "GH"
+        },
+        "sameAs": [
+            "https://github.com/deonthedeveloper",
+            "https://linkedin.com/in/deonthedeveloper",
+            "https://twitter.com/deonthedeveloper"
+        ],
+        "knowsAbout": [
+            "JavaScript",
+            "React",
+            "Java",
+            "Node.js",
+            "PostgreSQL",
+            "REST APIs",
+            "Docker",
+            "Tailwind CSS",
+            "Bootstrap",
+            "Full-Stack Web Development",
+            "Software Engineering"
+        ],
+        "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Full-Stack Developer",
+            "occupationLocation": {
+            "@type": "City",
+            "name": "Accra"
+            }
+        }
+        }
+    </script>
 </body>
 </html>
