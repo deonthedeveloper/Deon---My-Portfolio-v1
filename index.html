@@ -3,24 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary SEO -->
+    <title>Gideon C. Agu (Deon) — Full-Stack Developer | Accra, Ghana</title>
+    <meta name="description" content="Full-stack developer based in Accra, Ghana. I build fast, scalable Web and Mobile apps — React frontends, Node.js APIs, PostgreSQL databases. Available for remote roles and freelance projects.">
+    <meta name="keywords" content="full-stack developer, software engineer, Accra Ghana, React developer, Java, Node.js, PostgreSQL, remote developer, web developer Ghana, freelance developer Africa">
+    <!-- Author and robot -->
+    <meta name="author" content="Gideon C. Agu">
+    <meta name="robots" content="index, follow">
+    <!-- <link rel="canonical" href="https://yourportfolio.com"> -->
+
+    <!-- Controls how my link looks when shared on LinkedIn, WhatsApp, Facebook, Slack, Discord.The og:image is the preview thumbnail -->
+    <meta property="og:type"        content="website">
+    <meta property="og:url"         content="https://yourportfolio.com">
+    <meta property="og:title"       content="Gideon C. Agu — Full-Stack Developer">
+    <meta property="og:description" content="Full-stack developer based in Accra, Ghana. React · Node.js · PostgreSQL. Open to remote roles and freelance work.">
+    <!-- og:image — 1200×630px image -->
+    <meta property="og:image"        content="https://yourportfolio.com/assets/og-image.jpg">
+    <meta property="og:image:width"  content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt"    content="Gideon C. Agu — Full-Stack Developer">
+    <meta property="og:locale"       content="en_GB">
+    <meta property="og:site_name"    content="Deon — Full-Stack Developer">
+
+    <!-- Twitter / X Card  -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:url"         content="https://yourportfolio.com">
+    <meta name="twitter:title"       content="Gideon C. Agu — Full-Stack Developer">
+    <meta name="twitter:description" content="Full-stack developer based in Accra, Ghana. Building fast, scalable web apps.">
+    <meta name="twitter:image"       content="https://yourportfolio.com/assets/og-image.jpg">
+    <meta name="twitter:creator"     content="@yourtwitter">
+
+    <!-- Browser tab / mobile chrome colour -->
+    <meta name="theme-color" content="#151312" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Syne:wght@400..800&display=swap" media="print" onload="this.media='all'" rel="stylesheet">
 
     <!-- Google Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 
     <!-- Native CSS link -->
+    <link rel="preload" href="./css/output.css" as="style">
     <link rel="stylesheet" href="./css/output.css">
-    <title>Deon — Full-Stack Developer</title>
+    
 </head>
 <body class="min-h-screen antialiased text-base">
+    <!-- © 2026 Gideon C. Agu. All rights reserved. Unauthorised copying prohibited. -->
     <header id="site-header" class="sticky top-0 z-50 backdrop-blur-sm flex border-b border-b-text-2 items-center justify-between px-8 py-4">
         <span class="font-semibold tracking-tight">Deon</span>
         <div class="flex items-center gap-4">
-            <nav id="desktop-nav" class="hidden md:flex gap-6 text-sm text-text-3">
+            <nav id="desktop-nav" aria-label="Main navigation" class="hidden md:flex gap-6 text-sm text-text-3">
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#work">Project</a>
@@ -51,7 +92,7 @@
         <div class="max-w-6xl mx-auto my-28 px-4 flex flex-col md:flex-row items-center justify-between md:px-8 ">
             <div class="profile-intro">
                 <span class="inline-flex items-center gap-2 text-sm px-3 py-1 rounded-full text-green-700 border border-green-400 "><span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>Available for work</span>
-                <h1 class="font-heading text-5xl sm:text-6xl md:text-7xl font-semibold md:font-bold leading-tight my-4">Hi, I'm <span class="">Deon</span> &mdash;<br> Software Engineer</h1>
+                <h1 class="font-heading text-5xl sm:text-6xl md:text-7xl font-semibold md:font-bold leading-tight my-4">Hi, I'm <span class="">Deon</span> &mdash;<br> Full-Stack Developer</h1>
 
                 <!-- Typewriter -->
                 <p class="flex items-center mb-5 gap-0.5 min-h-8">
@@ -118,7 +159,7 @@
             </div>
 
             <div class="profile-card hidden md:flex flex-col gap-2">
-                <div class="avatar-ring bg-accent"><img src="./assets/profile.jpeg" alt=""></div>
+                <div class="avatar-ring bg-accent"><img src="./assets/profile.jpeg" alt="Gideon C. Agu — Full-Stack Developer based in Accra, Ghana" loading="eager"></div>
                 <div class="flex flex-col items-end gap-2 text-sm text-gray-500">
                     <span class="stat-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>3+ yrs experience</span>
                     <span class="stat-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>12 projects shipped</span>
@@ -133,7 +174,7 @@
         <div class="max-w-6xl mx-auto px-4 md:px-8 py-20">
             <!-- Section header  -->
             <div data-reveal>
-                <p class="section-label">Get to know me</p>                <!-- → change label if you want -->
+                <p class="section-label">Get to know me</p>              
                 <h2 class="section-heading">About Me</h2>
                 <div class="accent-bar"></div>
             </div>
@@ -149,7 +190,7 @@
 
                     <!-- Photo + name badge -->
                     <div class="flex items-start gap-4 mb-6">
-                        <div class="about-avatar"><img src="./assets/profile.jpeg" alt=""></div>            <!-- → replace YK with your initials -->
+                        <div class="about-avatar"><img src="./assets/profile.jpeg" alt="Gideon C. Agu — Full-Stack Developer based in Accra, Ghana" loading="lazy"></div>            <!-- → replace YK with your initials -->
 
                         <div class="pt-1">
                             <p style="font-size: 18px; font-weight: 700; color: var(--text-primary); margin: 0 0 6px;">Gideon C. Agu</p>                              <!-- → your name -->
@@ -169,7 +210,7 @@
                             "
                             >
                             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            Accra, Ghana                              <!-- → your location -->
+                            Accra, Ghana                              
                             </span>
                         </div>
                     </div>
@@ -177,28 +218,25 @@
 
                     <!-- Bio paragraphs
                         Formula:
-                        ¶1 — What you do + why you do it
-                        ¶2 — How you approach your work
-                        ¶3 — Who you are outside code (personality)
+                        ¶1 — What I do + why I do it
+                        ¶2 — How I approach your work
+                        ¶3 — Who I am outside code (personality)
                         Keep total under 100 words.               -->
                     <div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px;">
 
                         <p style="font-size: 16px; color: var(--color-text-3); line-height: 1.5; margin: 0;">
-                            <!-- → rewrite this in your own voice -->
                             I'm a full-stack developer who loves turning complex problems into
                             clean, working software. I got into coding to build tools I actually
                             wanted to exist — and I've been hooked ever since.
                         </p>
 
                         <p style="font-size: 16px; color: var(--color-text-3); line-height: 1.5; margin: 0;">
-                            <!-- → rewrite this in your own voice -->
                             I care about the full picture — from a pixel-perfect UI to a
                             well-structured database. For me, good code isn't just code that
                             works; it's code the next developer can understand and build on.
                         </p>
 
                         <p style="font-size: 16px; color: var(--color-text-3); line-height: 1.5; margin: 0;">
-                            <!-- → rewrite this in your own voice -->
                             Outside of coding, you'll find me mentoring junior devs,
                             exploring Accra's food scene, or deep in a rabbit hole about
                             system design at 2am.
@@ -209,39 +247,34 @@
                 </div>
 
 
-                <!-- ── RIGHT COL: stats + skills ──────────────── -->
+                <!-- RIGHT COL: stats + skills  -->
                 <div data-reveal style="animation-delay: 0.2s;">
 
-                    <!-- Stat cards grid
-                        Mobile:  3 cols (they're short, this works)
-                        Numbers: keep them real — small honest numbers
-                                beat large invented ones.             -->
+                    <!-- Stat cards grid -->
                     <div class="grid grid-cols-3 gap-3 mb-8">
 
                         <div class="stat-card">
-                            <div class="stat-num">12+</div>             <!-- → your real number -->
+                            <div class="stat-num">12+</div>             
                             <div class="stat-lbl">Projects<br>shipped</div>
                         </div>
 
                         <div class="stat-card">
-                            <div class="stat-num">3+</div>              <!-- → your real number -->
+                            <div class="stat-num">3+</div>              
                             <div class="stat-lbl">Years<br>building</div>
                         </div>
 
                         <div class="stat-card">
                             <div class="stat-num" style="font-size: 15px; padding-top: 4px;">Open<br>source</div>
-                            <div class="stat-lbl">contributor</div>
+                            <div class="stat-lbl">Contributor</div>
                         </div>
                     </div>
 
-                    <!-- "What I value" chips
-                        Update labels + icons to match your real values.
+                    <!-- "What I value" chips.
                         Icon reference: https://tabler.io/icons        -->
                     <div>
                         <p style="font-size: 12px; font-weight: 700; color: var(--text-primary); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 10px;">What I value</p>
 
                         <div class="flex flex-wrap gap-2">
-                            <!-- → update these chips to match your values -->
                             <span class="value-chip">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
                                 Clean code
@@ -267,17 +300,14 @@
                 </div>
 
 
-                <!-- ══════════════════════════════════════════════
-                    MINI TIMELINE
+                <!-- MINI TIMELINE
                     3 milestones — shows growth without needing
                     a full Experience section.
-                    Mobile + desktop: single column, full width.
-                ══════════════════════════════════════════════ -->
+                    Mobile + desktop: single column, full width.-->
                 <div data-reveal style="animation-delay: 0.25s; margin-bottom: 48px;">
                     <p style="font-size: 12px;font-weight: 700;color: var(--text-primary);text-transform: uppercase;letter-spacing: 0.07em;margin-bottom: 20px;">My journey</p>
 
-                    <!-- Timeline entries — update content, keep structure -->
-
+                    <!-- Timeline entries -->
                     <!-- Entry 1 -->
                     <div class="flex gap-4">
                         <div class="flex flex-col items-center">
@@ -285,8 +315,8 @@
                             <div class="tl-line"></div>
                         </div>
                         <div style="padding-bottom: 24px; flex: 1;">
-                            <p class="tl-year">2022</p>                  <!-- → your real year -->
-                            <p class="tl-title">Started freelancing</p>  <!-- → your milestone title -->
+                            <p class="tl-year">2022</p>                  
+                            <p class="tl-title">Started freelancing</p>  
                             <!-- → rewrite in your own words -->
                             <p class="tl-desc">
                                 Built my first 5 client sites using HTML, CSS and vanilla JS.
@@ -302,9 +332,8 @@
                             <div class="tl-line"></div>
                         </div>
                         <div style="padding-bottom: 24px; flex: 1;">
-                            <p class="tl-year">2023</p>                  <!-- → your real year -->
-                            <p class="tl-title">Went full-stack</p>      <!-- → your milestone title -->
-                            <!-- → rewrite in your own words -->
+                            <p class="tl-year">2023</p>                  
+                            <p class="tl-title">Went full-stack</p>                                  
                             <p class="tl-desc">
                                 Added Node.js, PostgreSQL and React to my stack.
                                 Shipped my first SaaS product with real paying users.
@@ -322,7 +351,6 @@
                         <div style="flex: 1;">
                             <p class="tl-year">Now</p>
                             <p class="tl-title">Open to opportunities</p>
-                            <!-- → rewrite in your own words -->
                             <p class="tl-desc">
                                 Actively building and looking for full-stack roles or freelance
                                 projects. Based in Accra, open to remote work globally.
@@ -384,7 +412,7 @@
                 <div class="accent-bar"></div>
             </div>
 
-            <!-- ── Pill groups ──────────────────────────────── -->
+            <!-- Pill groups  -->
             <div data-reveal style="animation-delay: 0.1s;">
 
                 <!-- FRONTEND -->
@@ -395,7 +423,6 @@
                     </p>
                     <div class="pill-wrap">
                         <!-- dot class: adv = advanced, int = intermediate, lrn = learning -->
-                        <!-- → update these pills to match your actual frontend skills -->
                         <span class="pill"><span class="pill-dot adv"></span>HTML</span>
                         <span class="pill"><span class="pill-dot adv"></span>CSS</span>
                         <span class="pill"><span class="pill-dot adv"></span>Tailwind CSS</span>
@@ -412,7 +439,6 @@
                         Backend
                     </p>
                     <div class="pill-wrap">
-                        <!-- → update these pills to match your actual backend skills -->
                         <span class="pill"><span class="pill-dot adv"></span>Node.js</span>
                         <span class="pill"><span class="pill-dot adv"></span>REST APIs</span>
                         <span class="pill"><span class="pill-dot int"></span>Express.js</span>
@@ -428,7 +454,6 @@
                         Database
                     </p>
                     <div class="pill-wrap">
-                        <!-- → update these pills to match your actual database skills -->
                         <span class="pill"><span class="pill-dot adv"></span>PostgreSQL</span>
                         <span class="pill"><span class="pill-dot int"></span>MongoDB</span>
                         <span class="pill"><span class="pill-dot int"></span>MySQL</span>
@@ -443,7 +468,6 @@
                         Tools &amp; DevOps
                     </p>
                     <div class="pill-wrap">
-                        <!-- → update these pills to match your actual tools -->
                         <span class="pill"><span class="pill-dot adv"></span>Git &amp; GitHub</span>
                         <span class="pill"><span class="pill-dot int"></span>Docker</span>
                         <span class="pill"><span class="pill-dot int"></span>Linux</span>
@@ -457,12 +481,12 @@
             </div>
 
 
-            <!-- ── Currently learning strip ────────────────── -->
+            <!-- Currently learning strip -->
 
             <div class="learning-strip" data-reveal style="animation-delay: 0.2s;">
                 <span class="learning-label">Currently exploring</span>
 
-                <!-- → replace these with what you're genuinely learning now -->
+                <!-- learning now -->
                 <span class="pill" style="border-style: dashed;">
                     <span class="pill-dot lrn"></span>TypeScript
                 </span>
@@ -475,7 +499,7 @@
             </div>
 
 
-            <!-- ── Legend ───────────────────────────────────── -->
+            <!-- Legend -->
             <div class="pill-legend" data-reveal style="animation-delay: 0.25s;">
                 <span class="legend-item">
                     <span class="legend-dot" style="background: var(--color-accent);"></span>
@@ -524,7 +548,7 @@
                 <div class="feat-body">
                     <span class="feat-badge">
                         <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        Featured project                          <!-- → change label if you want -->
+                        Featured project                          
                     </span>
 
                     <!-- → your project name -->
@@ -639,7 +663,7 @@
                 </div>
 
 
-                <!-- ── CARD 2 ──────────────────────────────── -->
+                <!-- Project CARD 2 -->
                 <div class="project-card">
                     <div class="project-thumb">
                         <!--
@@ -653,7 +677,7 @@
 
                     <div class="project-body">
                         <div class="project-top">
-                            <h3 class="project-title">E-commerce Store</h3>  <!-- → project name -->
+                            <h3 class="project-title">E-commerce Store</h3>  
                             <span class="project-type fullstack">Full-stack</span>
                         </div>
 
@@ -685,7 +709,7 @@
                 </div>
 
 
-                <!-- CARD 3 -->
+                <!-- Project CARD 3 -->
                 <div class="project-card">
                     <div class="project-thumb">
                         <div class="thumb-placeholder">
@@ -695,12 +719,11 @@
 
                     <div class="project-body">
                         <div class="project-top">
-                            <h3 class="project-title">Your Third Project</h3>  <!-- → project name -->
+                            <h3 class="project-title">Your Third Project</h3>  
                             <span class="project-type fullstack">Full-stack</span>
                         </div>
 
                         <p class="project-desc">
-                            <!-- → describe the problem your project solved and the outcome -->
                             Describe what this project does and why you built it.
                             Focus on the outcome, not just the features.
                         </p>
@@ -759,12 +782,10 @@
                             Freelance                                  <!-- → change to: Freelance / Full-time / Contract / Open source / Internship -->
                         </span>
                         <div class="exp-header">
-                            <p class="exp-role">Freelance Full-Stack Developer</p>  <!-- → your role title -->
-                            <span class="exp-date">2023 — present</span>            <!-- → your real dates -->
+                            <p class="exp-role">Freelance Full-Stack Developer</p>  
+                            <span class="exp-date">2023 — present</span>            
                         </div>
-                        <p class="exp-company">Self-employed · Remote</p>         <!-- → company + location / "Remote" -->
-
-                        <!-- → your real outcome-focused description (1–2 sentences) -->
+                        <p class="exp-company">Self-employed · Remote</p>         <!-- → company + location / "Remote" -->                        
                         <p class="exp-desc">
                             Designing, building, and deploying full-stack web apps for clients
                             across Ghana and the UK — managing projects end-to-end from
@@ -801,8 +822,8 @@
                             Open source
                         </span>
                         <div class="exp-header">
-                            <p class="exp-role">Open Source Contributor</p>        <!-- → your role -->
-                            <span class="exp-date">2022 — present</span>           <!-- → your dates -->
+                            <p class="exp-role">Open Source Contributor</p>        
+                            <span class="exp-date">2022 — present</span>           
                         </div>
                         <p class="exp-company">GitHub · Various projects</p>     <!-- → your repos / org -->
 
@@ -837,8 +858,8 @@
                             Self-taught
                         </span>
                         <div class="exp-header">
-                            <p class="exp-role">Self-Taught Full-Stack Developer</p>  <!-- → your title -->
-                            <span class="exp-date">2021 — 2022</span>                 <!-- → your dates -->
+                            <p class="exp-role">Self-Taught Full-Stack Developer</p>  
+                            <span class="exp-date">2021 — 2022</span>                 
                         </div>
                         <p class="exp-company">freeCodeCamp · The Odin Project · Online</p> <!-- → your platforms -->
 
@@ -1025,20 +1046,17 @@
                 </div>
  
  
-                <!-- ── RIGHT: Contact info ───────────────────── -->
+                <!-- RIGHT: Contact info -->
                 <div data-reveal style="animation-delay: 0.2s;">
  
                     <!-- Info cards -->
                     <div style="margin-bottom: 24px;">
- 
-                        <!-- Email — always show your real email, not just the form -->
                         <div class="contact-info-card">
                             <div class="contact-info-icon">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                             </div>
                             <div>
-                                <p class="contact-info-lbl">Email</p>
-                                <!-- → your real email -->
+                                <p class="contact-info-lbl">Email</p>                                
                                 <p class="contact-info-val">
                                     <a href="mailto:you@example.com" style="color: inherit; text-decoration: none;">
                                     deonthedeveloper@gmail.com
@@ -1054,7 +1072,7 @@
                             </div>
                             <div>
                                 <p class="contact-info-lbl">Based in</p>
-                                <p class="contact-info-val">Accra, Ghana &mdash; Remote friendly</p>  <!-- → your location -->
+                                <p class="contact-info-val">Accra, Ghana &mdash; Remote friendly</p>  
                             </div>
                         </div>
  
@@ -1065,7 +1083,7 @@
                             </div>
                             <div>
                                 <p class="contact-info-lbl">Timezone</p>
-                                <p class="contact-info-val">GMT &mdash; flexible for calls</p>  <!-- → your timezone -->
+                                <p class="contact-info-val">GMT &mdash; flexible for calls</p>  <!-- timezone -->
                             </div>
                         </div>
  
@@ -1076,7 +1094,6 @@
                             </div>
                             <div>
                                 <p class="contact-info-lbl">Availability</p>
-                                <!-- → update this regularly as your situation changes -->
                                 <p class="contact-info-val">Open to roles from Jan 2026</p>
                             </div>
                         </div>
@@ -1144,16 +1161,16 @@
             <!-- end contact grid -->
  
  
-            <!-- ── Footer ── -->
-            <div class="site-footer" style="margin-top: 48px;">
+            <!-- Footer -->
+            <footer class="site-footer" style="margin-top: 48px;">
                 <span class="footer-copy">
-                    &copy; 2026 DeonThedeveloper &mdash; Built with HTML, CSS &amp; Tailwind
+                    &copy; 2026 DeonThedeveloper &mdash; All rights reserved. Built with HTML, CSS &amp; Tailwind
                 </span>
                 <button class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Back to top">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
                     Back to top
                 </button>
-            </div>
+            </footer>
  
         </div>
     </section>

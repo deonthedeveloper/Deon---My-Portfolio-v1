@@ -40,7 +40,47 @@
   --color-accent: #14b8a6;
 }
 
+/* Tailwind-utility backed light-mode component styles */
+@layer components {
+  .light .site-header { @apply bg-white/60 border-gray-200; }
+  .light #desktop-nav a { @apply text-gray-700; }
+  .light #desktop-nav a.active { @apply text-teal-600; }
 
+  .light .project-card,
+  .light .project-featured,
+  .light .stat-card,
+  .light .about-cta-strip,
+  .light .contact-info-card,
+  .light .site-footer {
+    @apply bg-gray-100 border-gray-200 text-gray-900;
+  }
+
+  .light .project-link { @apply border-gray-300 text-gray-700 bg-transparent; }
+  .light .project-link.live { @apply bg-teal-500 text-white border-teal-500; }
+
+  .light .project-thumb,
+  .light .feat-thumb { @apply bg-gray-50; }
+
+  .light .about-avatar { @apply bg-gray-50 border-teal-500 text-teal-600; }
+
+  .light .form-input,
+  .light .form-textarea,
+  .light .form-select { @apply bg-white text-gray-900 border-gray-300; }
+
+  .light .btn-primary { @apply bg-teal-500 text-white; }
+  .light .btn-outline { @apply border-gray-300 text-gray-700; }
+
+  .light .social-link { @apply border-gray-200 text-gray-700 bg-transparent; }
+  .light .thumb-placeholder,
+  .light .feat-thumb-placeholder { @apply text-gray-500; }
+
+  .light .back-to-top { @apply text-gray-700; }
+
+  .light .pill,
+  .light .value-chip { @apply bg-white border-gray-200 text-gray-700; }
+
+  .light .learning-strip { @apply bg-gray-50 border-gray-200; }
+}
 
 /* @custom-variant light (&:where(.light *), .light&); */
 

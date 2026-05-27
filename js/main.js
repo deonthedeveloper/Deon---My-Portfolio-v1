@@ -32,39 +32,6 @@ function typeLoop() {
 typeLoop();
 
 (function () {
-
-  /* ── Skill bars — animate once on scroll into view ── */
-  const skillSection = document.getElementById('about');
-  if (!skillSection) return;
-
-  const bars    = skillSection.querySelectorAll('.skill-fill[data-width]');
-  let animated  = false;
-
-  const skillObserver = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting && !animated) {
-        animated = true;
-
-        /* Small delay so the section entrance animation
-           completes before the bars shoot across */
-        setTimeout(() => {
-          bars.forEach(bar => {
-            bar.style.width = bar.dataset.width + '%';
-          });
-        }, 300);
-
-        skillObserver.disconnect();
-      }
-    },
-    { threshold: 0.2 }
-  );
-
-  skillObserver.observe(skillSection);
-
-})();
-
-
-(function () {
  
   const form       = document.getElementById('contact-form');
   const successBox = document.getElementById('form-success');
@@ -310,3 +277,35 @@ typeLoop();
 
   initTheme();
 })();
+
+//(function () {
+
+//   /* ── Skill bars — animate once on scroll into view ── */
+//   const skillSection = document.getElementById('about');
+//   if (!skillSection) return;
+
+//   const bars    = skillSection.querySelectorAll('.skill-fill[data-width]');
+//   let animated  = false;
+
+//   const skillObserver = new IntersectionObserver(
+//     ([entry]) => {
+//       if (entry.isIntersecting && !animated) {
+//         animated = true;
+
+//         /* Small delay so the section entrance animation
+//            completes before the bars shoot across */
+//         setTimeout(() => {
+//           bars.forEach(bar => {
+//             bar.style.width = bar.dataset.width + '%';
+//           });
+//         }, 300);
+
+//         skillObserver.disconnect();
+//       }
+//     },
+//     { threshold: 0.2 }
+//   );
+
+//   skillObserver.observe(skillSection);
+
+// })();

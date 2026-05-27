@@ -10,7 +10,16 @@
     --color-green-500: oklch(72.3% 0.219 149.579);
     --color-green-700: oklch(52.7% 0.154 150.069);
     --color-teal-400: oklch(77.7% 0.152 181.912);
+    --color-teal-500: oklch(70.4% 0.14 182.503);
+    --color-teal-600: oklch(60% 0.118 184.704);
+    --color-gray-50: oklch(98.5% 0.002 247.839);
+    --color-gray-100: oklch(96.7% 0.003 264.542);
+    --color-gray-200: oklch(92.8% 0.006 264.531);
+    --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-500: oklch(55.1% 0.027 264.364);
+    --color-gray-700: oklch(37.3% 0.034 259.733);
+    --color-gray-900: oklch(21% 0.034 264.665);
+    --color-white: #fff;
     --spacing: 0.25rem;
     --container-6xl: 72rem;
     --text-sm: 0.875rem;
@@ -449,6 +458,10 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  .grayscale {
+    --tw-grayscale: grayscale(100%);
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
   .backdrop-blur-sm {
     --tw-backdrop-blur: blur(var(--blur-sm));
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
@@ -563,6 +576,77 @@
   --color-text-2: #57534e;
   --color-text-3: #a8a29e;
   --color-accent: #14b8a6;
+}
+@layer components {
+  .light .site-header {
+    border-color: var(--color-gray-200);
+    background-color: color-mix(in srgb, #fff 60%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 60%, transparent);
+    }
+  }
+  .light #desktop-nav a {
+    color: var(--color-gray-700);
+  }
+  .light #desktop-nav a.active {
+    color: var(--color-teal-600);
+  }
+  .light .project-card, .light .project-featured, .light .stat-card, .light .about-cta-strip, .light .contact-info-card, .light .site-footer {
+    border-color: var(--color-gray-200);
+    background-color: var(--color-gray-100);
+    color: var(--color-gray-900);
+  }
+  .light .project-link {
+    border-color: var(--color-gray-300);
+    background-color: transparent;
+    color: var(--color-gray-700);
+  }
+  .light .project-link.live {
+    border-color: var(--color-teal-500);
+    background-color: var(--color-teal-500);
+    color: var(--color-white);
+  }
+  .light .project-thumb, .light .feat-thumb {
+    background-color: var(--color-gray-50);
+  }
+  .light .about-avatar {
+    border-color: var(--color-teal-500);
+    background-color: var(--color-gray-50);
+    color: var(--color-teal-600);
+  }
+  .light .form-input, .light .form-textarea, .light .form-select {
+    border-color: var(--color-gray-300);
+    background-color: var(--color-white);
+    color: var(--color-gray-900);
+  }
+  .light .btn-primary {
+    background-color: var(--color-teal-500);
+    color: var(--color-white);
+  }
+  .light .btn-outline {
+    border-color: var(--color-gray-300);
+    color: var(--color-gray-700);
+  }
+  .light .social-link {
+    border-color: var(--color-gray-200);
+    background-color: transparent;
+    color: var(--color-gray-700);
+  }
+  .light .thumb-placeholder, .light .feat-thumb-placeholder {
+    color: var(--color-gray-500);
+  }
+  .light .back-to-top {
+    color: var(--color-gray-700);
+  }
+  .light .pill, .light .value-chip {
+    border-color: var(--color-gray-200);
+    background-color: var(--color-white);
+    color: var(--color-gray-700);
+  }
+  .light .learning-strip {
+    border-color: var(--color-gray-200);
+    background-color: var(--color-gray-50);
+  }
 }
 .delay-1 {
   animation-delay: 0.05s;
@@ -1810,6 +1894,59 @@ h1, h2, h3, h4, h5, h6 {
   syntax: "*";
   inherits: false;
 }
+@property --tw-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-drop-shadow-size {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-backdrop-blur {
   syntax: "*";
   inherits: false;
@@ -1867,6 +2004,19 @@ h1, h2, h3, h4, h5, h6 {
       --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;
+      --tw-blur: initial;
+      --tw-brightness: initial;
+      --tw-contrast: initial;
+      --tw-grayscale: initial;
+      --tw-hue-rotate: initial;
+      --tw-invert: initial;
+      --tw-opacity: initial;
+      --tw-saturate: initial;
+      --tw-sepia: initial;
+      --tw-drop-shadow: initial;
+      --tw-drop-shadow-color: initial;
+      --tw-drop-shadow-alpha: 100%;
+      --tw-drop-shadow-size: initial;
       --tw-backdrop-blur: initial;
       --tw-backdrop-brightness: initial;
       --tw-backdrop-contrast: initial;

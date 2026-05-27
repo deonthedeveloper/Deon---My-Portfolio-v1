@@ -1,12 +1,25 @@
 {
   "cSpell.words": [
     "adipisicing",
+    "Consolas",
+    "currentcolor",
+    "focusring",
     "Formspree",
+    "grayscale",
+    "Menlo",
     "Mensah",
+    "minmax",
+    "Noto",
     "nowrap",
+    "oklab",
+    "oklch",
     "opensource",
+    "optgroup",
     "replyto",
-    "rgba"
+    "rgba",
+    "samp",
+    "Segoe",
+    "srgb"
   ],
   "tailwindCSS.experimental.configFile": "css/input.css",
   "tailwindCSS.includeLanguages": {
