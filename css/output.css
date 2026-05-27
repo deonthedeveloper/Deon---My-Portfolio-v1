@@ -10,13 +10,13 @@
     --color-green-500: oklch(72.3% 0.219 149.579);
     --color-green-700: oklch(52.7% 0.154 150.069);
     --color-teal-400: oklch(77.7% 0.152 181.912);
-    --color-teal-500: oklch(70.4% 0.14 182.503);
-    --color-teal-600: oklch(60% 0.118 184.704);
+    --color-teal-700: oklch(51.1% 0.096 186.391);
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-500: oklch(55.1% 0.027 264.364);
+    --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-gray-900: oklch(21% 0.034 264.665);
     --color-white: #fff;
@@ -49,7 +49,6 @@
     --font-heading: "Syne", sans-serif;
     --font-body: "DM Sans", sans-serif;
     --text-primary: #ffffff;
-    --text-secondary: #353334;
     --text-secondary-tint: #3f3e3e8d;
     --color-text-2: #57534e;
     --color-text-3: #a8a29e;
@@ -574,8 +573,9 @@
   --bg-color-2: #f5f5f4;
   --text-primary: #0f0d0c;
   --color-text-2: #57534e;
-  --color-text-3: #a8a29e;
-  --color-accent: #14b8a6;
+  --color-text-3: #78716c;
+  --color-accent: #0f766e;
+  --color-accent-tint: #d8f8f3;
 }
 @layer components {
   .light .site-header {
@@ -589,7 +589,7 @@
     color: var(--color-gray-700);
   }
   .light #desktop-nav a.active {
-    color: var(--color-teal-600);
+    color: var(--color-teal-700);
   }
   .light .project-card, .light .project-featured, .light .stat-card, .light .about-cta-strip, .light .contact-info-card, .light .site-footer {
     border-color: var(--color-gray-200);
@@ -602,17 +602,17 @@
     color: var(--color-gray-700);
   }
   .light .project-link.live {
-    border-color: var(--color-teal-500);
-    background-color: var(--color-teal-500);
+    border-color: var(--color-teal-700);
+    background-color: var(--color-teal-700);
     color: var(--color-white);
   }
   .light .project-thumb, .light .feat-thumb {
     background-color: var(--color-gray-50);
   }
   .light .about-avatar {
-    border-color: var(--color-teal-500);
+    border-color: var(--color-teal-700);
     background-color: var(--color-gray-50);
-    color: var(--color-teal-600);
+    color: var(--color-teal-700);
   }
   .light .form-input, .light .form-textarea, .light .form-select {
     border-color: var(--color-gray-300);
@@ -620,7 +620,9 @@
     color: var(--color-gray-900);
   }
   .light .btn-primary {
-    background-color: var(--color-teal-500);
+    background-color: var(--color-teal-700);
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
     color: var(--color-white);
   }
   .light .btn-outline {
@@ -631,6 +633,25 @@
     border-color: var(--color-gray-200);
     background-color: transparent;
     color: var(--color-gray-700);
+  }
+  .light .social-btn {
+    border-color: var(--color-gray-200);
+    background-color: color-mix(in srgb, #fff 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 80%, transparent);
+    }
+    color: var(--color-gray-700);
+  }
+  .light .social-btn:hover {
+    border-color: var(--color-teal-700);
+    color: var(--color-teal-700);
+  }
+  .light .contact-download-card {
+    border-color: var(--color-gray-200);
+    background-color: var(--color-gray-100);
+  }
+  .light .contact-download-card p {
+    color: var(--color-gray-600);
   }
   .light .thumb-placeholder, .light .feat-thumb-placeholder {
     color: var(--color-gray-500);
@@ -1738,8 +1759,15 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 8px;
     transition: border-color 0.2s;
   }
+  .contact-download-card {
+    padding: 16px 18px;
+    background: var(--bg-color-2);
+    border: 1px solid var(--color-text-2);
+    border-radius: 14px;
+    transition: border-color 0.2s;
+  }
   @media (hover: hover) and (pointer: fine) {
-    .contact-info-card:hover {
+    .contact-info-card:hover, .contact-download-card:hover {
       border-color: var(--color-accent);
     }
   }
