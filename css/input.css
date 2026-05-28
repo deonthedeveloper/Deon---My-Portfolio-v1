@@ -11,11 +11,10 @@
   --text-secondary-tint: #3f3e3e8d;
   
   --color-text:      #0f0d0c;
-  --color-text-2:    #57534e;
+  --color-text-2:    rgb(87, 83, 78);
   --color-text-3:    #a8a29e;
-  --color-accent: #2dd4bf;
+  --color-accent: #14b8a6;
   --color-accent-tint:    #ccfbef;
-  /* --color-border:    #e7e5e4; */
 }
 
 :root {
@@ -29,6 +28,7 @@
   --color-text-3:    #a8a29e;
   --color-accent:   #14b8a6;
   --color-accent-tint:#ccfbef;
+    --color-purple:    #534ab7;
 }
 
 .light {
@@ -87,8 +87,6 @@
 
   .light .learning-strip { @apply bg-gray-50 border-gray-200; }
 }
-
-/* @custom-variant light (&:where(.light *), .light&); */
 
 /* ── Staggered animation delays ──────────────── */
 .delay-1 { animation-delay: 0.05s; }
@@ -584,7 +582,6 @@ h1, h2, h3, h4, h5, h6 {
 
   /* Closing CTA strip inside About */
   .about-cta-strip {
-    /* background: var(--color-bg-2); */
     border: 1px solid var(--color-text-2);
     border-radius: 16px;
     padding: 24px 28px;
@@ -770,13 +767,12 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'JetBrains Mono', monospace;
     padding: 3px 10px;
     border-radius: 99px;
-    background: rgba(20,184,166,0.1);
+    background: rgba(20,184,166,0.1);  /*rgba(20,184,166,0.1)*/
     border: 1px solid rgba(20,184,166,0.3);
-    color: var(--color-accent-2, #065f46);
+    color: var(--color-accent);
     margin-bottom: 12px;
     width: fit-content;
   }
-  .dark .feat-badge { color: var(--color-accent); }
  
   .feat-title {
     font-family: var(--font-heading);
@@ -902,14 +898,15 @@ h1, h2, h3, h4, h5, h6 {
   .project-type.fullstack {
     background: rgba(20,184,166,0.08);
     border-color: rgba(20,184,166,0.3);
-    color: #065f46;
+    color: var(--color-accent); /* #065f46*/
   }
-  /* .dark .project-type.fullstack { color: var(--color-accent); }
+  
   .project-type.backend {
     background: rgba(127,119,221,0.08);
     border-color: rgba(127,119,221,0.3);
-    color: #534ab7;
-  } */
+    color: var(--color-purple);
+  }
+
   .project-type.frontend {
     background: var(--color-bg-3);
     color: var(--color-text-2);
@@ -934,8 +931,8 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-mono);
     padding: 2px 8px;
     border-radius: 99px;
-    background: var(--bg-color);  /*--color-bg-3:   #292524;*/
-    border: 1px solid var(--color-text-2);
+    background: var(--bg-color);
+    border: 1px solid rgb(87, 83, 78, 0.2);  /* This is --color-text-2 but i changed it to rgba so i can make the border a bit transparent on light mode */
     color: var(--color-text-3);
   }
  

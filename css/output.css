@@ -51,9 +51,9 @@
     --font-body: "DM Sans", sans-serif;
     --text-primary: #ffffff;
     --text-secondary-tint: #3f3e3e8d;
-    --color-text-2: #57534e;
+    --color-text-2: rgb(87, 83, 78);
     --color-text-3: #a8a29e;
-    --color-accent: #2dd4bf;
+    --color-accent: #14b8a6;
   }
 }
 @layer base {
@@ -568,6 +568,7 @@
   --color-text-3: #a8a29e;
   --color-accent: #14b8a6;
   --color-accent-tint: #ccfbef;
+  --color-purple: #534ab7;
 }
 .light {
   --bg-color: #fafaf9;
@@ -1331,12 +1332,9 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 99px;
     background: rgba(20,184,166,0.1);
     border: 1px solid rgba(20,184,166,0.3);
-    color: var(--color-accent-2, #065f46);
+    color: var(--color-accent);
     margin-bottom: 12px;
     width: fit-content;
-  }
-  .dark .feat-badge {
-    color: var(--color-accent);
   }
   .feat-title {
     font-family: var(--font-heading);
@@ -1453,7 +1451,12 @@ h1, h2, h3, h4, h5, h6 {
   .project-type.fullstack {
     background: rgba(20,184,166,0.08);
     border-color: rgba(20,184,166,0.3);
-    color: #065f46;
+    color: var(--color-accent);
+  }
+  .project-type.backend {
+    background: rgba(127,119,221,0.08);
+    border-color: rgba(127,119,221,0.3);
+    color: var(--color-purple);
   }
   .project-type.frontend {
     background: var(--color-bg-3);
@@ -1478,7 +1481,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2px 8px;
     border-radius: 99px;
     background: var(--bg-color);
-    border: 1px solid var(--color-text-2);
+    border: 1px solid rgb(87, 83, 78, 0.2);
     color: var(--color-text-3);
   }
   .project-links {
