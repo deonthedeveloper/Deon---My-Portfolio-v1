@@ -262,6 +262,21 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* .resume-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: var(--color-text-3);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.resume-link:hover,
+.resume-link:focus-visible {
+  color: var(--color-accent);
+} */
+
 /* Theme toggle */
 #theme-toggle {
   cursor: pointer;

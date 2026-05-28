@@ -167,6 +167,7 @@ typeLoop();
     mobileNav.classList.remove('open');
     mobileNav.classList.add('closing');
     mobileMenuButton.setAttribute('aria-expanded', 'false');
+    mobileNav.setAttribute('aria-hidden', 'true');
     mobileMenuButton.querySelector('.material-symbols-outlined').textContent = 'menu';
 
     window.setTimeout(() => {
@@ -179,6 +180,7 @@ typeLoop();
   function openMobileNav() {
     mobileNav.classList.remove('closing');
     mobileNav.classList.add('open');
+    mobileNav.setAttribute('aria-hidden', 'false');
     mobileMenuButton.setAttribute('aria-expanded', 'true');
     mobileMenuButton.querySelector('.material-symbols-outlined').textContent = 'close';
   }
