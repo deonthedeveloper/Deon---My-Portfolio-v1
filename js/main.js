@@ -158,6 +158,26 @@ typeLoop();
 })();
 
 (function () {
+  // Reveal-on-scroll for elements with `data-reveal`.
+  const reveals = Array.from(document.querySelectorAll('[data-reveal]'));
+  if (!reveals.length) return;
+
+  const revealObserver = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.08 }
+  );
+
+  reveals.forEach(el => revealObserver.observe(el));
+})();
+
+(function () {
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileNav = document.getElementById('mobile-nav');
 
@@ -279,35 +299,3 @@ typeLoop();
 
   initTheme();
 })();
-
-//(function () {
-
-//   /* ── Skill bars — animate once on scroll into view ── */
-//   const skillSection = document.getElementById('about');
-//   if (!skillSection) return;
-
-//   const bars    = skillSection.querySelectorAll('.skill-fill[data-width]');
-//   let animated  = false;
-
-//   const skillObserver = new IntersectionObserver(
-//     ([entry]) => {
-//       if (entry.isIntersecting && !animated) {
-//         animated = true;
-
-//         /* Small delay so the section entrance animation
-//            completes before the bars shoot across */
-//         setTimeout(() => {
-//           bars.forEach(bar => {
-//             bar.style.width = bar.dataset.width + '%';
-//           });
-//         }, 300);
-
-//         skillObserver.disconnect();
-//       }
-//     },
-//     { threshold: 0.2 }
-//   );
-
-//   skillObserver.observe(skillSection);
-
-// })();
