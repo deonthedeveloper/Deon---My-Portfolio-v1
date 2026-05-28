@@ -261,6 +261,9 @@
   .hidden {
     display: none;
   }
+  .inline {
+    display: inline;
+  }
   .inline-flex {
     display: inline-flex;
   }
@@ -942,8 +945,9 @@ h1, h2, h3, h4, h5, h6 {
   transition: opacity 0.28s ease, transform 0.28s ease, max-height 0.28s ease, visibility 0.28s ease;
   transform: translateY(-10px);
   border-top: 1px solid var(--color-text-2);
-  backdrop-filter: blur(16px);
   background: rgba(21, 19, 18, 0.94);
+  will-change: transform, opacity;
+  transform: translateZ(0) translateY(-10px);
 }
 #mobile-nav.open {
   opacity: 1;

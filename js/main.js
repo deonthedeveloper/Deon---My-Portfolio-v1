@@ -188,7 +188,8 @@ typeLoop();
     mobileNav.classList.add('closing');
     mobileMenuButton.setAttribute('aria-expanded', 'false');
     mobileNav.setAttribute('aria-hidden', 'true');
-    mobileMenuButton.querySelector('.material-symbols-outlined').textContent = 'menu';
+    document.getElementById('menu-icon').style.display = 'block';
+    document.getElementById('close-icon').style.display = 'none';
 
     window.setTimeout(() => {
       if (!mobileNav.classList.contains('open')) {
@@ -202,7 +203,8 @@ typeLoop();
     mobileNav.classList.add('open');
     mobileNav.setAttribute('aria-hidden', 'false');
     mobileMenuButton.setAttribute('aria-expanded', 'true');
-    mobileMenuButton.querySelector('.material-symbols-outlined').textContent = 'close';
+    document.getElementById('menu-icon').style.display = 'none';
+    document.getElementById('close-icon').style.display = 'block';
   }
 
   mobileMenuButton.addEventListener('click', () => {
@@ -268,11 +270,17 @@ typeLoop();
   }
 
   function updateToggleButton(theme) {
-    const icon = themeToggle.querySelector('.material-symbols-outlined');
-    if (icon) {
-      icon.textContent = theme === 'light' ? 'dark_mode' : 'light_mode';
+    const sunIcon = document.getElementById('sun-icon');
+    const moonIcon = document.getElementById('moon-icon');
+    if (theme === 'light') {
+      if (sunIcon) sunIcon.style.display = 'none';
+      if (moonIcon) moonIcon.style.display = 'block';
+      themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+    } else {
+      if (sunIcon) sunIcon.style.display = 'block';
+      if (moonIcon) moonIcon.style.display = 'none';
+      themeToggle.setAttribute('aria-label', 'Switch to light mode');
     }
-    themeToggle.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
   }
 
   function applyTheme(theme) {
