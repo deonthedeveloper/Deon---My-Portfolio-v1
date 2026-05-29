@@ -1,6 +1,7 @@
 // ── 4. Typewriter effect 
 const phrases = [
     'I build full-stack web apps.',
+    'I develop cross-platform mobile apps.',
     'I turn ideas into products.',
     'I write clean, scalable code.',
     'I craft seamless experiences.',
