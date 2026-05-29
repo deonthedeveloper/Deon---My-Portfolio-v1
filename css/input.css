@@ -144,6 +144,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
 }
 
+/* Hero h1 — tighter line-height and letter spacing */
+#hero h1 {
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
 /* @variant dark (&:where(.dark, .dark *)); */
 
 .image-card {
